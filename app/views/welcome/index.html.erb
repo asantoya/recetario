@@ -1,0 +1,23 @@
+<h1> BIENVENIDO A SU APP DE RECETARIOS </h1>
+
+
+<% if current_user %>
+<%= link_to "my profile",user_path(current_user) %>
+<%else%>
+<%= link_to "sign in", new_user_session_path %>
+<%end%>
+
+<table class="table table-condensed">
+	<tr>
+    	<th>nombre</th>
+        <th></th>
+        
+  	</tr>
+
+  	<% @recetas.each do |receta| %>
+    <tr>
+      <td><%= receta.nombre %></td>
+      <td><%= link_to 'ver', user_receta_path(receta.user_id, receta) %></td>
+      </tr>
+<% end %>
+</table>

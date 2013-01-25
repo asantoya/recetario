@@ -1,0 +1,20 @@
+<h1>WELCOME <%=@user.email%> </h1>
+
+	<table class="table table-condensed">
+		<tr>
+        	<th>nombre</th>
+	        <th>descripcion</th>
+	        <th></th>
+	        <th></th>
+      	</tr>
+ 
+      	<% @recetas.each do |receta| %>
+	    <tr>
+	      <td><%= receta.nombre %></td>
+	      <td><%= receta.descipcion %></td>
+	      <td><%= link_to 'Edit', edit_user_receta_path(current_user, receta) %></td>
+	      <td><%= link_to 'Delete', user_receta_path(current_user, receta), :confirm => 'Are you sure?', :method => :delete %></td>
+	    </tr>
+    <% end %>
+    </table>
+<%= link_to "crear receta",  new_user_receta_path(current_user)%>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+      <div class="container">
+        
+        <fieldset>
+          <h1>receta info</h1>
+          <br>
+          <p></p>
+          <table class="table table-condensed">
+			     <tr><th>nombre</th><td><%= @receta.nombre %></td></tr>
+  			   <tr><th>ingredientes</th><td><%= @receta.ingredientes %></td></tr>
+  			   <tr><th>descipcion</th><td><%= @receta.descipcion %></td></tr>
+  			   </table>
+          <%= link_to "Back to profile", current_user %>
+          <br>
+          <p></p>
+        </fieldset>
+      </div> <!-- /container -->
+    </body>
+</html>
