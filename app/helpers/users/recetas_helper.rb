@@ -1,0 +1,2 @@
+module Users::RecetasHelper
+end

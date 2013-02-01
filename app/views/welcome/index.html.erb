@@ -17,7 +17,7 @@
   	<% @recetas.each do |receta| %>
     <tr>
       <td><%= receta.nombre %></td>
-      <td><%= link_to 'ver', user_receta_path(receta.user_id, receta) %></td>
+      <td><%= link_to 'ver', receta_path(receta) %></td>
       </tr>
 <% end %>
 </table>

@@ -2,8 +2,10 @@ Recetario::Application.routes.draw do
   devise_for :users
 
   resources :users do
-    resources :recetas
+    resources :recetas, module: :users, only: [:index]
   end
+
+  resources :recetas
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

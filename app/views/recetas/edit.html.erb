@@ -4,7 +4,7 @@
 
         <div class="container">
         <h2>ingresar nueva receta</h2>
-        <%= form_for @receta, :url =>  user_receta_path, :method=> :put do |f| %>
+        <%= form_for @receta, :url =>  receta_path, :method=> :put do |f| %>
           <div><%= f.label :nombre %><br />
           <%= f.text_field :nombre %></div>
 

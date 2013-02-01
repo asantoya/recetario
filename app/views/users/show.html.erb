@@ -10,11 +10,11 @@
  
       	<% @recetas.each do |receta| %>
 	    <tr>
-	      <td><%= receta.nombre %></td>
+	      <td><%= link_to receta.nombre, receta_path(receta) %></td>
 	      <td><%= receta.descipcion %></td>
-	      <td><%= link_to 'Edit', edit_user_receta_path(current_user, receta) %></td>
-	      <td><%= link_to 'Delete', user_receta_path(current_user, receta), :confirm => 'Are you sure?', :method => :delete %></td>
+	      <td><%= link_to 'Edit', edit_receta_path(receta) %></td>
+	      <td><%= link_to 'Delete', receta_path(receta), :confirm => 'Are you sure?', :method => :delete %></td>
 	    </tr>
     <% end %>
     </table>
-<%= link_to "crear receta",  new_user_receta_path(current_user)%>
+<%= link_to "crear receta",  new_receta_path%>
