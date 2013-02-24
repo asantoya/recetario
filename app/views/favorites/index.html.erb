@@ -1,0 +1,16 @@
+<h1>MY FAVORITES RECETAS</h1>
+
+	<table class="table table-condensed">
+		<tr>
+        	<th>nombre</th>
+	        <th>descripcion</th>
+        </tr>
+ 
+      	<% @recetas.each do |receta| %>
+	    <tr>
+	      <td><%= link_to receta.nombre, receta_path(receta) %></td>
+	      <td><%= receta.descipcion %></td>
+      	</tr>
+    <% end %>
+    </table>
+<%= link_to "crear receta",  new_receta_path%>

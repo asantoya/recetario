@@ -3,6 +3,7 @@ Recetario::Application.routes.draw do
 
   resources :users do
     resources :recetas, module: :users, only: [:index]
+    resources :favorites
   end
 
   resources :recetas
